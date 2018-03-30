@@ -1,0 +1,10 @@
+*** Settings ***
+Library           ExcelLibrary
+
+*** Test Cases ***
+ExcelTest
+    Open Excel    C:/Users/abousselhami/Desktop/fichierxcel/Test_Shortcut.xlsx
+    ${index}    Get Column Count    Feuil1
+    ${test}    Read Cell Data By Coordinates    Feuil1    0    0
+    Log    ${index}
+    Log    ${test}

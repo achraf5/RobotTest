@@ -1,0 +1,10 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Test Cases ***
+getTitle
+    Open Browser    https://lemoteur.orange.fr/?kw=psg&bhv=web_fr&module=orange&target=orange    gc
+    Log Title
+    Click Element    //*[@id="resultId"]/div[5]/div/div[2]/div[1]/a
+    Sleep    5s
+    Select Window    Main
